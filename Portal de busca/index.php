@@ -209,7 +209,7 @@ input[type="radio"]{
         <div class="card">
          <div class="content">
            <div class="img">
-            <img src="img/automacao.png"  alt="Imagem de consultar provisionamento">
+            <img src="img/automacao.png"  alt="">
            </div>
            <div class="details">
              <div class="name">Consultar provisionamento</div>
