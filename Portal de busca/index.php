@@ -307,7 +307,7 @@ input[type="radio"]{
     </div>
 
   </div>
-     <p align="middle" style="color: #ffffff"> C3PO SURF- v.1.1 </a>. 
+     <p align="middle" style="color: #ffffff"> C3PO SURF- v.1.1. 
     </p>
 </body>
 </html>

@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="pt-br" dir="ltr">
   <head>
     <meta charset="UTF-8">
     <title>C3PO SURF- v.1.1</title>
-    <link rel="sortcut icon" href="img/icone.png"/>;
+    <link rel="sortcut icon" href="img/icone.png"/>
     <link rel="stylesheet" href="style.css">
-
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,7 +12,6 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
    <style>
-
      /* Google Fonts Import Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
@@ -228,7 +225,7 @@
 .home-section{
   position: relative;
   background: #FFFFFF;
-  height: 10vh;
+  height: 15vh;
   left: 260px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
@@ -268,11 +265,11 @@ th{
   color:  #fff;
 }
 
-</style>
+   </style>
 <body>
   <div class="sidebar close">
     <div class="logo-details">
-      <i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style ="height: 40px; width: 70px"></i>
+    <i><img src="logo1-C3POv2.1.png" alt="logo c3po" style ="height: 40px; width: 70px"></i>
       <span class="logo_name"></span>
     </div>
 
@@ -314,39 +311,30 @@ th{
           <li><a class="link_name" href="Gatofy.php">Gatofy</a></li>
         </ul>
       </li>
-      <li>
-        <a href="powerbi.php">
-          <i class='bx bxs-folder-minus'></i>
-          <span class="link_name">Dashboard</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="powerbi.php">Dashboard</a></li>
-        </ul>
-      </li>
 </ul>
   </div>
 
   <section class="home-section">
-    <a><img src="img/Logo.png" alt="logo surf" style ="height: 80px;"align="right"></a>
+    <a><img src="Logo.png" alt="logo surf" style ="height: 80px;"align="right"></a>
     <div class="home-content">
       <i class='bx bx-menu' ></i>
       <script>
-        let arrow = document.querySelectorAll(".arrow");
-        for (var i = 0; i < arrow.length; i++) {
-          arrow[i].addEventListener("click", (e)=>{
-        let arrowParent = e.target.parentElement.parentElement;
-        arrowParent.classList.toggle("showMenu");
-          });
-        }
-        let sidebar = document.querySelector(".sidebar");
-        let sidebarBtn = document.querySelector(".bx-menu");
-        console.log(sidebarBtn);
-        sidebarBtn.addEventListener("click", ()=>{
-          sidebar.classList.toggle("close");
-        });
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
   </script>
-</div>
-<hr>
+    </div>
+    <hr>
 
 <section class="section">
   <div class="columns is-four-fifths">
@@ -368,7 +356,7 @@ th{
   <div class="dropdown-menu" id="dropdown-menu4" role="menu">
     <div class="dropdown-content">
       <div class="dropdown-item">
-        <p>Necessário inserir ao menos o MSISDN ou o IMSI para a busca.<br> Caso escolha a pesquisa por data, inserir com o formato correto <strong>AAAA-MM-DD.</strong></p>
+        <p>Necessário inserir ao menos o MSISDN ou o IMSI para a busca.</p>
       </div>
     </div>
   </div>
@@ -398,17 +386,8 @@ th{
               </div>
             </div>
             <div class="column">
-              <label for="DATA" class="label">DATA</label>
-              <div class="control has-icons-left">
-              <input style= maxlength="10" placeholder="AAAA/MM/DD" type="date" value="01/10/2021"class="input" name="DATA">
-                <span class="icon is-small is-left">
-                 <i class="fa fa-calendar"></i>
-                </span>
-              </div>
-            </div>
-            <div class="column">
-              <label for="busca" class="label"></label><br>
-                <input id="div1" type="submit" class="button">
+            <label for="busca" class="label"></label><br>
+                <input type="submit" id="div1" class="button">
             </div>
 
 
@@ -417,22 +396,23 @@ th{
       
     </article>
   </div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </div>
-</form>
-<!-- fim do form-->
-
+    </form>
+    <!-- fim do form--> 
     <script src="lib/zepto.min.js"></script>
     <script src="lib/javascript.min.js"></script>
     </div>
 <br> 
 <div class="notification is-gray">
-<h5 class="title">
-Resultado da busca
+    <h5 class="title">
+    Resultado da busca
     
-<div class="dropdown is-hoverable">
+      <div class="dropdown is-hoverable">
   <div class="dropdown-trigger">
     <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+      
       <span class="icon is-small">
         <i class="fa fa-info" aria-hidden="true"></i>
       </span>
@@ -441,15 +421,17 @@ Resultado da busca
   <div class="dropdown-menu" id="dropdown-menu4" role="menu">
     <div class="dropdown-content">
       <div class="dropdown-item">
-        <p>Se a data de correção for igual a data, o MSISDN ou IMSI pesquisado teve sucesso em sua primeira ação. Caso não haja data de correção, o MSISDN ou IMSI pesquisado, ainda não foi corrigido.</p>
+        <p>Se um número tiver sua data de ultima ocorrência diferente do dia pesquisado, significa que o mesmo não se encontra mais no FNR.</p>
       </div>
     </div>
   </div>
 </div>
-</h5>
+
+
+  </h5>
+
+
 <br>
-
-
 <!-- inicio do retorno de filtro-->
 <?php
 date_default_timezone_set('America/Sao_Paulo');
@@ -459,72 +441,37 @@ $msisdn =($_POST['MSISDN']);
 $imsi = ($_POST['IMSI']);
 $data= ($_POST['DATA']);
 ?>
-
-<?php
-if(!empty($_POST['DATA'])&& !empty($_POST['MSISDN']) && !empty($_POST['IMSI'])){
+<?php 
+if(!empty($_POST['MSISDN']) && !empty($_POST['IMSI'])){
+ 
 ?>
-
-<article class="message is-info is-small">
-  <div class="message-body">
-    <?php echo'Pesquisa realizada com o filtro de MSISDN: '.$msisdn.', ' ?><?php echo'IMSI: '.$imsi.' e ' ?><?php echo'data: '.$data.' ' ?><?php echo'no dia '.date('d/m/y  H:i').'.' ?>
-  </div>
-</article>
-<?php
-}else if(!empty($_POST['DATA'])&& !empty($_POST['MSISDN'])){
-?>
-
-<article class="message is-info is-small">
-  <div class="message-body">
-    <?php echo'Pesquisa realizada com o filtro de MSISDN: '.$msisdn.' e ' ?><?php echo'data: '.$data.' ' ?><?php echo'no dia '.date('d/m/y  H:i').'.' ?>
-  </div>
-  </article>
-<?php
-}else if(!empty($_POST['DATA'])&& !empty($_POST['IMSI'])){
-?>
-
-<article class="message is-info is-small">
-  <div class="message-body">
-    <?php echo'Pesquisa realizada com o filtro de IMSI: '.$imsi.' e ' ?><?php echo'data: '.$data.' ' ?><?php echo'no dia '.date('d/m/y  H:i').'.' ?>
-  </div>
-  </article>
-<?php
-}else if (!empty($_POST['DATA'])){
-?>
-
-<article class="message is-info is-small">
-  <div class="message-body">
-    <?php echo'Pesquisa realizada com o filtro de data: '.$data.' ' ?><?php echo'no dia '.date('d/m/y  H:i').'.' ?>
-  </div>
-  </article>
-<?php
-}else if(!empty($_POST['MSISDN']) && !empty($_POST['IMSI'])){
-?>
-
 <article class="message is-info is-small">
   <div class="message-body">
     <?php echo'Pesquisa realizada com filtro de MSISDN: '.$msisdn.' e ' ?><?php echo'IMSI: '.$imsi.' ' ?><?php echo'no dia '.date('d/m/y  H:i').'.' ?>
   </div>
   </article>
-<?php
 
+<?php
 }else if (!empty($_POST['IMSI'])) {
 ?>
+
 <article class="message is-info is-small">
   <div class="message-body">
     <?php echo'Pesquisa realizada com filtro de IMSI: '.$imsi.' ' ?><?php echo'no dia '.date('d/m/y  H:i').'.' ?>
   </div>
   </article>
-<?php
 
+<?php
 }else if (!empty($_POST['MSISDN'])){
   ?>
+
   <article class="message is-info is-small">
   <div class="message-body">
-    <?php echo'Pesquisa realizada com filtro de MSISDN: '.$msisdn.' ' ?><?php echo'no dia '.date('d/m/y  H:i').'.' ?>
+    <?php echo'Pesquisa realizada para o MSISDN: '.$msisdn.' ' ?><?php echo'no dia '.date('d/m/y  H:i').'.' ?>
   </div>
   </article>
- <?php
 
+ <?php
 }else if (!empty($_POST['DATA'])&& !empty($_POST['MSISDN']) && !empty($_POST['IMSI'])){
   ?>
   <?php echo'Não foram inseridos filtros para a pesquisa'?>
@@ -533,42 +480,40 @@ if(!empty($_POST['DATA'])&& !empty($_POST['MSISDN']) && !empty($_POST['IMSI'])){
   <?php
 }
 ?>
+<!-- fim do retorno de filtro-->
 
-<table id="Table_result"  class="table is-fullwidth">
+<!--tabela-->
+  <table id="Table_result"  class="table is-fullwidth">
 
- <!-- cabeçalho da tabela de retorno da pesquisa-->
-  <thead class="Notification is-gray">
+<!-- cabeçalho da tabela de retorno da pesquisa-->
+  <thead class="Notification is">
     <tr class="is-selected">
 
-      <th title="id">ID</th>
+      
       <th title="MSISDN">MSISDN</th>
       <th title="IMSI">IMSI</th>
-      <th title="Ação">AÇÃO</th>
-      <th title="Status">STATUS</th>
-      <th title="Nome arquivo">NOME ARQUIVO</th>
-      <th title="Data">DATA</th>
-      <th title="Data correção">DATA CORREÇÃO</th>
+      <th title="Nome do arquivo">NOME ARQUIVO</th>
+      <th title="Data">DATA DE PRIMEIRA OCORRÊNCIA</th>
+      <th title="Data">DATA DE ULTIMA OCORRÊNCIA</th>
+      
 
     </tr>
+
   </thead>
-  <!-- Fim do cabeçalho da tabela de retorno da pesquisa-->
+<!-- Fim do cabeçalho da tabela de retorno da pesquisa-->
   
+
 <tbody>
-
-
 <!-- tabela de retorno da pesquisa-->
 <tr>
-     <td>1</td>
+    
      <td>11999999999</td>
      <td>11111111111111</td>
-     <td>Demonstração da funcionalidade</td>
-     <td>Sucesso</td>
-     <td>Demonstração.txt</td>
-     <td>16/11/2021 12:51:00</td>
-     <td>16/11/2021 12:51:00</td>
+     <td>arquivodedemonstração.txt</td>
+     <td>15-11-2021 15:30:27</td>
+     <td>16-11-2021 21:33:00</td>
   </tr>
-  <?php  
-
+  <?php   
 ?>
 </tbody>
 </table>
@@ -602,9 +547,11 @@ if(!empty($_POST['DATA'])&& !empty($_POST['MSISDN']) && !empty($_POST['IMSI'])){
 <div class="card">
   <div class="content has-text-centered">
     <p>
-      C3PO SURF- v.1.1. 
+    C3PO SURF- v.1.1. 
     </p>
   </div>
 </div>
+
 </body>
+
 </html>
