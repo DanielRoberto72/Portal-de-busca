@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <title>C3PO - v.1.1</title>
-    <link rel="sortcut icon" href="img/icone.png"/>
     <link rel="stylesheet" href="style.css">
 
     <!-- Boxiocns CDN Link -->
@@ -491,8 +490,8 @@ th{
      <td style="  font-size:  13px">Sem fechamento</td>
 
     <td>
-        <button style="background: #fff; color:#0000ff; border-color: #0000ff; border-radius: 3px"><a  href='editar_ticket.php?id_ticket=$id_ticket'>alterar</a><br></button>
-        <button style="background: #0000ff; color:#fff; border-radius: 3px"><a  href='solucionar_ticket.php?id_ticket=$id_ticket'>solucionar</a></button>
+        <button style="background: #fff; color:#0000ff; border-color: #0000ff; border-radius: 3px"><a  href='editar_ticket.php?'>alterar</a><br></button>
+        <button style="background: #0000ff; color:#fff; border-radius: 3px"><a  href='solucionar_ticket.php'>solucionar</a></button>
     </td>
 </tr>
 

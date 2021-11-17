@@ -4,7 +4,6 @@
   <head>
     <meta charset="UTF-8">
     <title>C3PO - v.1.1</title>
-    <link rel="sortcut icon" href="img/icone.png"/>;
     <link rel="stylesheet" href="style.css">
 
     <!-- Boxiocns CDN Link -->

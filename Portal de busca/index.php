@@ -5,7 +5,6 @@
   <head>
     <meta charset="UTF-8">
     <title>C3PO - v.1.1</title>
-    <link rel="sortcut icon" href="img/icone.png"/>
 
     <!-- Fontawesome CDN Link -->
 

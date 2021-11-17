@@ -1,17 +1,21 @@
-<!-- Código baseado em código OpenSource do CodingLab-->
 <!DOCTYPE html>
-<html lang="pt-br">
+<!-- Código baseado em código OpenSource do CodingLab-->
+<html lang="pt-br" >
   <head>
     <meta charset="UTF-8">
     <title>C3PO - v.1.1</title>
+    <link rel="sortcut icon" href="img/icone.png"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
-   <style>
-     /* Googlefont Poppins CDN Link */
+<style>
+
+/* Googlefont Poppins CDN Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
@@ -511,13 +515,149 @@ th{
   padding: 12px 0;
   transition: all 0.5s ease;
 }
-</style>
+::selection{
+  background: #0000FF;
+  color: #fff;
+}
+.container{
+   max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
 
+
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 170px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #0000ff);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #0000ff);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #0000ff);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+
+</style>
 <body>
   <div class="sidebar">
     <div class="logo-details">
-    <i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style ="height: 40px; width: 70px"></i>
-      <span class="logo_name"></span>
+    <i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style ="height: 30px; width: 50px"></i>
     </div>
       <ul class="nav-links">
         <li>
@@ -527,44 +667,24 @@ th{
         </a>
       </li>
       <li>
-        <a href="Provisionamento.php">
+        <a href="cadastro.php">
           <i class='bx bxs-data' ></i>
-          <span class="link_name">Consultar Provisionamento</span>
+          <span class="link_name">Criar ticket</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="Provisionamento.php">Consultar Provisionamento</a></li>
+          <li><a class="link_name" href="cadastro.php">Criar ticket</a></li>
         </ul>
       </li>
-      <li>
-        <a href="FNR.php">
+        <li>
+        <a href="consultar_ticket.php">
           <i class='bx bxs-folder-minus'></i>
-          <span class="link_name">Consultar FNR</span>
+          <span class="link_name">Consultar ticket</span>
         </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="FNR.php">Consultar FNR</a></li>
-        </ul>
-      </li>
-       <li>
-        <a href="Gatofy.php">
-          <i class='bx bx-wifi'></i>
-          <span class="link_name">Gatofy</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="Gatofy.php">Gatofy</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="powerbi.php">
-          <i class='bx bxs-folder-minus'></i>
-          <span class="link_name">Dashboard</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="powerbi.php">Dashboard</a></li>
-        </ul>
-      </li>
       </ul>
   </div>
+
   <section class="home-section">
+  <a><img src="Logo.png" alt="logo surf" style ="height: 80px;"align="right"></a>
 
     <nav>
       <div class="sidebar-button">
@@ -573,186 +693,134 @@ th{
       </div>
     </nav>
 
-<div class="home-content">
+    <div class="home-content">
       <script>
-            let sidebar = document.querySelector(".sidebar");
+        let sidebar = document.querySelector(".sidebar");
             let sidebarBtn = document.querySelector(".bx-menu");
-                sidebarBtn.onclick = function() {
-                sidebar.classList.toggle("active");
-                    if(sidebar.classList.contains("active")){
-                        sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
-                    }else
-                    sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-                    }
-
+            sidebarBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+                if(sidebar.classList.contains("active")){
+                sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+                }else
+                sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            }
  </script>
-    <section class="section">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <div class="columns is-four-fifths">
-    <div class="container is-fullhd">
-        <div class="notification is-white">
- 
-    <div class="resultadoForm">
-      <h5 class="title">
-        Realizar busca
-        <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-                    <span class="icon is-small">
-                        <i class="fa fa-info" aria-hidden="true"></i>
-                    </span>
-                </button>
-  </div>
-
-  <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-    <div class="dropdown-content">
-      <div class="dropdown-item">
-        <p>Necessário inserir ao menos o ICCID ou o IMEI para a busca.<br> Caso escolha a pesquisa por CPF, pode aparecer mais de um modem</p>
-      </div>
-    </div>
-  </div>
-</div>  
-<br>
-</h5>
-
-<!-- inicio do form-->
-
-  <form name="formBusca" id="formBusca" action="" method="POST">
-       
-    <div class="columns">
-          <div class="column">
-              <label for="ICCID" class="label">ICCID*</label>
-              <div class="control has-icons-left">
-                <input maxlength="" placeholder="" type="text" class="input" name="ICCID" id="ICCID">
-                <span class="icon is-small is-left">
-                 <i class="fa fa-tablet"></i>
-                </span>
-              </div>
-            </div>
-            
-            <div class="column">
-              <label for="IMSI" class="label">IMSI</label>
-              <div class="control has-icons-left">
-                <input maxlength="16" placeholder="72417" type="text" class="input" name="IMSI">
-                <span class="icon is-small is-left">
-                 <i class="fa fa-phone"></i>
-                </span>
-              </div>
-            </div>
-
-            <div class="column">
-              <label for="CPF" class="label">CPF</label>
-              <div class="control has-icons-left">
-                <input maxlength="" placeholder="" type="text" class="input" name="CPF">
-                <span class="icon is-small is-left">
-                 <i class="fa fa-file"></i>
-                </span>
-              </div>
-            </div>
-
-            <div class="column">
-              <label for="busca" class="label"></label><br>
-                <input id="div1" type="submit" class="button">
-            </div>
-
-</div>
-</form>
-
-<script src="lib/zepto.min.js"></script>
-<script src="lib/javascript.min.js"></script>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- caixas de texto para retorno das informações principais-->
-      <div class="overview-boxes">
-        <div class="box">
-          <div class="right-side">
-            <div class="box-topic">N° KIT</div>
-            <div class="number">1</div>
+<div class="overview-boxes">
+    <div class="box">
+        <div class="right-side">
+        <div class="box-topic">OTRS</div>
+            <div class="number">12345678910</div>
             <div class="indicator">
             </div>
           </div>
-          <i class=''><img src="img/wifiL.png"></i>
+          <i class=''><img src="img/padrao.png"></i>
         </div>
    <div class="box">
-          <div class="right-side"> 
-            <div class="box-topic">ICCID</div>
-            <div class="number">8888888888888</div>
+          <div class="right-side">
+            <div class="box-topic">Fornecedor</div>
+            <div class="number">Fornecedor demonstração</div>
             <div class="indicator">
             </div>
           </div>
-          <i class=''><img src="img/computer-chip.png"></i>
+          <i class=''><img src="img/service.png"></i>
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">IMSI</div>
-            <div class="number">888888888</div> 
-        <div class="indicator">
-            </div>
-          </div>
-          <i class=''><img src="img/computer-chip.png"></i>
-        </div>
-         <div class="box">
-          <div class="right-side">
-            <div class="box-topic">DATA ATIVAÇÃO</div>
-            <div class="number">16-11-2021</div>
+            <div class="box-topic">Ticket Fornecedor </div>
+            <div class="number">123456</div>
             <div class="indicator">
             </div>
           </div>
-          <i class=''><img src="img/calendar.png"></i>
+          <i class=''><img src="img/ticket.png"></i>
         </div>
-
-        <div class="box" style="background: #0000ff;">
+          <div class="box "style="background: #FF0000; color:#fff">
           <div class="right-side">
-            <div class="box-topic"style="color: #ffffff;" >Status</div>
-            <div class="number">Ativo</div>
+            <div class="box-topic">Criticidade </div>
+            <div class="number">ALTA</div>
             <div class="indicator">
             </div>
           </div>
-          <i class='' ><img src="img/status.png"></i>
-        </div>
+          <i class=''><img src="img/velocimetro.png"></i>
+        </div> 
       </div>
+<div class="sales-boxes">
+    <div class="recent-sales box"style="width: 50%";>
+    <div class="sales-details">
+    <div class="container">
+    <div class="title">Solucionar ticket</div>
+    <div class="content">
+      <form method="POST" action="">
+        <div class="user-details">
+        
+        <div class="input-box">
+          solução
+        <select name="select_solucao" style="width: 300px; height:45px; border-radius: 5px;border-color: #0000ff;" required>
+          <option value="">Selecione</option>
+          <option value="1">Selecione a solução</option>
+       </select>
+    </div><br>
 
-      <!-- Caixa para informações do usuario do modem-->
-      <div class="sales-boxes">
-        <div class="recent-sales box">
-          <div class="title">Informações do Cliente</div>
-          <div class="sales-details">
-            <ul class="details">
-
-            <hr><li><a><?php echo'ID USUÁRIO: 1' ?></a></li>
-            <li><a><?php echo'NOME: Usuario demonstração'?></a></li>
-            <li><a><?php echo'EMAIL: demonstração@gmail.com'?></a></li>
-            <li><a><?php echo'TELEFONE: 11999999999'?></a></li>
-            <li><a><?php echo'CPF: 123456789-0'?></a></li>
-            <li><a><?php echo 'RG: 123456789'?></a></li>
-
-          </ul>
-      
+       <div class="input-box">
+            <input type="hidden" name="ID" value='1' style="width: 300px; height:45px; border-radius: 5px;border-color: #0000ff;">
+          </div>
         </div>
+        <div class="button" style="width: 300px";>
+        <input type="submit" value="Solucionar Ticket">
         </div>
-        <!-- caixa para informações do modem-->
-
-        <div class="top-sales box">
-          <div class="title">Informações do Modem</div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+        
+        <div class="top-sales box"style="width: 50%";>
+          <div class="title">Informações</div>
           <ul class="top-sales-details">
-
-            <hr><li>
-            <a >
-              <!--<img src="images/sunglasses.jpg" alt="">-->
-              <span class="product"><?php echo'Dia de vencimento: 13'?></span>
+            <hr>
+            <li>
+                <a>
+                <span class="product">OTRS: 12345678910</span>
+                </a>
+            </li>
+            <li>
+            <a>
+              <span class="product">FORNECEDOR: Fornecedor demonstração</span>
             </a>
-            
           </li>
           <li>
-            <a >
-               <!--<img src="images/jeans.jpg" alt="">-->
-              <span class="product"><?php echo'Data de bloqueio Modem: Não há bloqueio'?></span>
+            <a>
+              <span class="product">TICKET FORNECEDOR: 123456</span>
+            </a>
+          </li>
+           <li>
+            <a>
+              <span class="product">CRITICIDADE: ALTA</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="product">CATEGORIA: Categoria demonstração</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="product">SOLUÇÃO: Sem solução</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="product">DATA DE ABERTURA: 17-11-2021 12:00:00</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="product">DATA DE FECHAMENTO: Sem fechamento</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="product">STATUS: Aberto</span>
             </a>
           </li>
           </ul>
@@ -761,14 +829,9 @@ th{
     </div>
     <br>
  
- <div class="card">
-  <div class="content has-text-centered">
-    <p>
-      C3PO SURF- v.1.1.
-    </p>
-  </div>
-</div>
-</section>
+    <p align="middle" > C3PO - v.1.1.<p>
+  
+  </section>
 </body>
 </html>
 

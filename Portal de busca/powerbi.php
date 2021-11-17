@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
     <title>C3PO - v.1.1</title>
     <link rel="stylesheet" href="style.css">
+
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
-   <style>
-     /* Google Fonts Import Link */
+<style>
+
+/* Google Fonts Import Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
   margin: 0;
@@ -224,7 +226,7 @@
 .home-section{
   position: relative;
   background: #FFFFFF;
-  height: 15vh;
+  height: 10vh;
   left: 260px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
@@ -263,16 +265,30 @@ th{
   background-color: #0000FF;
   color:  #fff;
 }
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 21%;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #0000ff);
+}
 
-   </style>
+</style>
+
 <body>
   <div class="sidebar close">
     <div class="logo-details">
-    <i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style ="height: 40px; width: 70px"></i>
+      <i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style ="height: 34px; width: 70px"></i>
       <span class="logo_name"></span>
     </div>
-
-    <!-- Menu lateral-->
     <ul class="nav-links">
       <li>
         <a href="index.php">
@@ -292,15 +308,7 @@ th{
           <li><a class="link_name" href="Provisionamento.php">Consultar Provisionamento</a></li>
         </ul>
       </li>
-      <li>
-        <a href="FNR.php">
-          <i class='bx bxs-folder-minus'></i>
-          <span class="link_name">Consultar FNR</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="FNR.php">Consultar FNR</a></li>
-        </ul>
-      </li>
+      
       <li>
         <a href="Gatofy.php">
           <i class='bx bx-wifi'></i>
@@ -310,102 +318,46 @@ th{
           <li><a class="link_name" href="Gatofy.php">Gatofy</a></li>
         </ul>
       </li>
+      <li>
+        <a href="powerbi.php">
+          <i class='bx bxs-folder-minus'></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="powerbi.php">Dashboard</a></li>
+        </ul>
+      </li>
 </ul>
-  </div>
+</div>
 
   <section class="home-section">
     <div class="home-content">
       <i class='bx bx-menu' ></i>
+
       <script>
-  let arrow = document.querySelectorAll(".arrow");
-  for (var i = 0; i < arrow.length; i++) {
-    arrow[i].addEventListener("click", (e)=>{
-   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-   arrowParent.classList.toggle("showMenu");
-    });
-  }
-  let sidebar = document.querySelector(".sidebar");
-  let sidebarBtn = document.querySelector(".bx-menu");
-  console.log(sidebarBtn);
-  sidebarBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("close");
-  });
-  </script>
-    </div>
-    <hr>
+            let arrow = document.querySelectorAll(".arrow");
+            for (var i = 0; i < arrow.length; i++) {
+                arrow[i].addEventListener("click", (e)=>{
+            let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+            arrowParent.classList.toggle("showMenu");
+                });
+            }
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".bx-menu");
+            console.log(sidebarBtn);
+            sidebarBtn.addEventListener("click", ()=>{
+                sidebar.classList.toggle("close");
+            });
+     </script>
+</div>
+<hr>
+
 
 <section class="section">
-  <div class="columns is-four-fifths">
-    <div class="container is-fullhd">
-    <div class="notification is-white">
- 
-<div class="resultadoForm">
-      <h5 class="title">
-        Realizar busca
-        <div class="dropdown is-hoverable">
-  <div class="dropdown-trigger">
-    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-      
-      <span class="icon is-small">
-        <i class="fa fa-info" aria-hidden="true"></i>
-      </span>
-    </button>
-  </div>
-  <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-    <div class="dropdown-content">
-      <div class="dropdown-item">
-        <p>Necessário inserir ao menos o MSISDN ou o IMSI para a busca.</p>
-      </div>
-    </div>
-  </div>
-</div>  
-        <br>
-      </h5>
-<!-- inicio do form-->      
-  <form name="formBusca" id="formBusca" action="" method="POST">
-       
-    <div class="columns">
-            <div class="column">
-              <label for="MSISDN" class="label">MSISDN*</label>
-              <div class="control has-icons-left">
-                <input maxlength="13" placeholder="55" type="text" class="input" name="MSISDN" id="MSISDN">
-                <span class="icon is-small is-left">
-                 <i class="fa fa-tablet"></i>
-                </span>
-              </div>
-            </div>
-            <div class="column">
-              <label for="IMSI" class="label">IMSI*</label>
-              <div class="control has-icons-left">
-                <input maxlength="16" placeholder="72417" type="text" class="input" name="IMSI">
-                <span class="icon is-small is-left">
-                 <i class="fa fa-microchip"></i>
-                </span>
-              </div>
-            </div>
-            <div class="column">
-            <label for="busca" class="label"></label><br>
-                <input type="submit" id="div1" class="button">
-            </div>
-
-
-  <div class="tile is-parent">
-    <article class="">
-      
-    </article>
-  </div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-</div>
-    </form>
-    <!-- fim do form--> 
-    <script src="lib/zepto.min.js"></script>
-    <script src="lib/javascript.min.js"></script>
-    </div>
 <br> 
-<div class="notification is-gray">
-    <h5 class="title">
-    Resultado da busca
+<div class="notification is-white">
+    <h5 class="title" style="font-family: 'Josefin Sans', sans-serif;">
+    Dashboards Power BI
     
       <div class="dropdown is-hoverable">
   <div class="dropdown-trigger">
@@ -419,137 +371,36 @@ th{
   <div class="dropdown-menu" id="dropdown-menu4" role="menu">
     <div class="dropdown-content">
       <div class="dropdown-item">
-        <p>Se um número tiver sua data de ultima ocorrência diferente do dia pesquisado, significa que o mesmo não se encontra mais no FNR.</p>
+        <p>Aqui encontram-se os dashboards produzidos para que todos possam visualizar e consumir as informações para fins legais.</p>
       </div>
     </div>
   </div>
 </div>
+</h5>
+<br>
 
+<!-- inicio da apresentação dos Dashboards-->
+<div class="container">
+<div class="columns is-mobile">
+  <div class="column">
+  
+  <br><div class="title">Dashboard demonstração</div>
+ <!-- Aqui são adicionados os Iframes do power bi-->
+ <i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style =width="600" height="373.5 border-radius: 10px;"></i>
+</div>
 
-  </h5>
-
+  <div class="column">
+  <br><div class="title">Dashboard demonstração 2</div>
+  <!-- Aqui são adicionados os Iframes do power bi-->
+  <i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style =width="600" height="373.5 border-radius: 10px;"></i>
+</div>
+</div>
 
 <br>
-<!-- inicio do retorno de filtro-->
-<?php
-date_default_timezone_set('America/Sao_Paulo');
-error_reporting(0);
 
-$msisdn =($_POST['MSISDN']);
-$imsi = ($_POST['IMSI']);
-$data= ($_POST['DATA']);
-?>
-<?php 
-if(!empty($_POST['MSISDN']) && !empty($_POST['IMSI'])){
- 
-?>
-<article class="message is-info is-small">
-  <div class="message-body">
-    <?php echo'Pesquisa realizada com filtro de MSISDN: '.$msisdn.' e ' ?><?php echo'IMSI: '.$imsi.' ' ?><?php echo'no dia '.date('d/m/y  H:i').'.' ?>
-  </div>
-  </article>
+<p align="middle"> C3PO - v.1.1.</p>
 
-<?php
-}else if (!empty($_POST['IMSI'])) {
-?>
-
-<article class="message is-info is-small">
-  <div class="message-body">
-    <?php echo'Pesquisa realizada com filtro de IMSI: '.$imsi.' ' ?><?php echo'no dia '.date('d/m/y  H:i').'.' ?>
-  </div>
-  </article>
-
-<?php
-}else if (!empty($_POST['MSISDN'])){
-  ?>
-
-  <article class="message is-info is-small">
-  <div class="message-body">
-    <?php echo'Pesquisa realizada para o MSISDN: '.$msisdn.' ' ?><?php echo'no dia '.date('d/m/y  H:i').'.' ?>
-  </div>
-  </article>
-
- <?php
-}else if (!empty($_POST['DATA'])&& !empty($_POST['MSISDN']) && !empty($_POST['IMSI'])){
-  ?>
-  <?php echo'Não foram inseridos filtros para a pesquisa'?>
-}
-  ?>
-  <?php
-}
-?>
-<!-- fim do retorno de filtro-->
-
-<!--tabela-->
-  <table id="Table_result"  class="table is-fullwidth">
-
-<!-- cabeçalho da tabela de retorno da pesquisa-->
-  <thead class="Notification is">
-    <tr class="is-selected">
-
-      
-      <th title="MSISDN">MSISDN</th>
-      <th title="IMSI">IMSI</th>
-      <th title="Nome do arquivo">NOME ARQUIVO</th>
-      <th title="Data">DATA DE PRIMEIRA OCORRÊNCIA</th>
-      <th title="Data">DATA DE ULTIMA OCORRÊNCIA</th>
-      
-
-    </tr>
-
-  </thead>
-<!-- Fim do cabeçalho da tabela de retorno da pesquisa-->
-  
-
-<tbody>
-<!-- tabela de retorno da pesquisa-->
-<tr>
-    
-     <td>11999999999</td>
-     <td>11111111111111</td>
-     <td>arquivodedemonstração.txt</td>
-     <td>15-11-2021 15:30:27</td>
-     <td>16-11-2021 21:33:00</td>
-  </tr>
-  <?php   
-?>
-</tbody>
-</table>
-</div>
-<!-- Fim da tabela de retorno da pesquisa-->
-
-<!-- paginação da tabela de retorno da pesquisa-->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-<script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-<script>$(document).ready( function () {
-    $('#Table_result').DataTable({
-      "language": {
-            "lengthMenu": "Resultados _MENU_ registros por página",
-            "zeroRecords": "Nada encontrado para a busca",
-            "info": "Mostrando página _PAGE_ de _PAGES_",
-            "infoEmpty": "Nenhum registro disponível",
-            "infoFiltered": "(Filtrado de _MAX_ registros totais)"
-        }
-    });
-} );
-</script>
-<!-- Fim da paginação da tabela de retorno da pesquisa-->
-</div>
-</div>
-</div>
-</section>
-
-
-<div class="card">
-  <div class="content has-text-centered">
-    <p>
-    C3PO SURF- v.1.1. 
-    </p>
-  </div>
 </div>
 
 </body>
-
 </html>
