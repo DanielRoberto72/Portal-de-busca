@@ -269,7 +269,7 @@ th{
 <body>
   <div class="sidebar close">
     <div class="logo-details">
-    <i><img src="logo1-C3POv2.1.png" alt="logo c3po" style ="height: 40px; width: 70px"></i>
+    <i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style ="height: 40px; width: 70px"></i>
       <span class="logo_name"></span>
     </div>
 
@@ -315,7 +315,7 @@ th{
   </div>
 
   <section class="home-section">
-    <a><img src="Logo.png" alt="logo surf" style ="height: 80px;"align="right"></a>
+  <a><img src="img/Logo.png" alt="logo surf" style ="height: 80px;"align="right"></a>
     <div class="home-content">
       <i class='bx bx-menu' ></i>
       <script>
