@@ -4,7 +4,7 @@
 <html lang="pt-br" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title>C3PO SURF- v.1.1</title>
+    <title>C3PO - v.1.1</title>
     <link rel="sortcut icon" href="img/icone.png"/>
 
     <!-- Fontawesome CDN Link -->
@@ -183,7 +183,7 @@ input[type="radio"]{
 
 <section class="section is-medium">
 
-  <h1 align="middle" class="title" style="font-family: 'Teko', sans-serif;"><i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style ="height: 70px; width: 140px;"align="left"></i>Selecione uma opção <i><img src="img/Logo.png" alt="logo surf" style ="height: 80px;"align="right"></i></h1><hr>
+  <h1 align="middle" class="title" style="font-family: 'Teko', sans-serif;"><i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style ="height: 70px; width: 140px;"align="left"></i>Selecione uma opção</h1><hr>
 
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
@@ -307,7 +307,7 @@ input[type="radio"]{
     </div>
 
   </div>
-     <p align="middle" style="color: #ffffff"> C3PO SURF- v.1.1. 
+     <p align="middle" style="color: #ffffff"> C3PO- v.1.1. 
     </p>
 </body>
 </html>

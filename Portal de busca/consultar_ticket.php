@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
-    <title>C3PO SURF- v.1.1</title>
+    <title>C3PO - v.1.1</title>
     <link rel="sortcut icon" href="img/icone.png"/>
     <link rel="stylesheet" href="style.css">
 
@@ -305,7 +305,6 @@ th{
 </div>
 
 <section class="home-section">
-    <a><img src="img/Logo.png" alt="logo surf" style ="height: 80px;"align="right"></a>
     <div class="home-content">
       <i class='bx bx-menu' ></i>
     <script>

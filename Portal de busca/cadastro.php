@@ -4,7 +4,7 @@
   <head>
 
     <meta charset="UTF-8">
-    <title>C3PO SURF- v.1.1</title>
+    <title>C3PO - v.1.1</title>
     <link rel="sortcut icon" href="img/icone.png"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style.css">
@@ -180,7 +180,7 @@ form .user-details .input-box{
     <!-- container para o form-->
     <div class="container">
     <div> <h2 align="middle">Novo Ticket</h2> </div>
-    <h1 class="title" align="middle" ><i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style ="height: 40px; width: 70px;"align="middle"></i><i><img src="img/Logo.png" alt="logo surf" style ="height: 45px;"align="middle"></i></h1>
+    <h1 class="title" align="middle" ><i><img src="img/logo1-C3POv2.1.png" alt="logo c3po" style ="height: 40px; width: 70px;"align="middle"></i></h1>
 
 
     <div class="content">
@@ -209,7 +209,7 @@ form .user-details .input-box{
           <div class="input-box">
           Categoria<select name="select_cat1" style="width: 640px; height:45px; border-radius: 5px;border-color: #0000ff;" required>
           <option value="">Selecione</option>
-          <option value = "1"> Aqui vão as categorias do chamado</option>
+          <option value = "1">Aqui vão as categorias do chamado</option>
        </select></div>
     </div>
     <div class="button">
